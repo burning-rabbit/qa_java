@@ -1,12 +1,22 @@
 package com.example;
-
 import java.util.List;
 
 public class Lion {
 
+    public Feline feline;
+    public Animal animal;
+
+    public Lion(Feline feline){
+        this.feline = feline;
+    }
+    public Lion(Animal animal){
+        this.animal = animal;
+    }
+
+
     boolean hasMane;
 
-    public Lion(String sex) throws Exception {
+    public Lion (String sex) throws Exception {
         if ("Самец".equals(sex)) {
             hasMane = true;
         } else if ("Самка".equals(sex)) {
@@ -16,7 +26,6 @@ public class Lion {
         }
     }
 
-    Feline feline = new Feline();
 
     public int getKittens() {
         return feline.getKittens();
@@ -27,6 +36,6 @@ public class Lion {
     }
 
     public List<String> getFood() throws Exception {
-        return feline.getFood("Хищник");
+        return animal.getFood("Хищник");
     }
 }
