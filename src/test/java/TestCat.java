@@ -20,12 +20,11 @@ public class TestCat {
         Assert.assertEquals(cat.getSound(), "Мяу");
     }
 
-
     @Test
     public void testGetFood() throws Exception {
         Cat cat = new Cat(feline);
-        Mockito.when(feline.eatMeat()).thenReturn(List.of("Животные", "Птицы", "Рыба"));
         List<String> actual = Arrays.asList("Животные", "Птицы", "Рыба");
+        Mockito.when(feline.eatMeat()).thenReturn(actual);
         Assert.assertEquals(cat.getFood(), actual);
     }
 }

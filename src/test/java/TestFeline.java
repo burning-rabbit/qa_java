@@ -1,4 +1,3 @@
-import com.example.Animal;
 import com.example.Feline;
 import org.junit.Assert;
 import org.junit.Test;
@@ -32,7 +31,7 @@ public class TestFeline {
     }
 
     @Mock
-    Animal animal;
+    Feline animal;
 
     @Test
     public void testEatMeat() throws Exception {

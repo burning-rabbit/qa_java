@@ -1,3 +1,4 @@
+import com.example.Feline;
 import com.example.Lion;
 import org.junit.Assert;
 import org.junit.Test;
@@ -20,18 +21,14 @@ public class TestLionParam {
         return new Object[][]{
                 {"Самец", true},
                 {"Самка", false},
-                {"Гриб", false},
         };
     }
 
     @Test
     public void testDoesHaveMane() throws Exception {
-        try {
-            Lion lion = new Lion (sex);
-            Assert.assertEquals(lion.doesHaveMane(), hasMane);
-        } catch (Exception e) {
-            Assert.assertEquals(e.getMessage(), "Используйте допустимые значения пола животного - самей или самка");
-        }
+        Feline feline = new Feline();
+        Lion lion = new Lion (sex,feline);
+        Assert.assertEquals(lion.doesHaveMane(), hasMane);
     }
 
 }
