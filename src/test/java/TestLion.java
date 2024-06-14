@@ -19,14 +19,14 @@ public class TestLion {
     public void testGetKittens() {
         Lion lion = new Lion(feline);
         Mockito.when(feline.getKittens()).thenReturn(1);
-        Assert.assertEquals(lion.getKittens(), 1);
+        Assert.assertEquals(1, lion.getKittens());
     }
 
     @Test
     public void testGetFood() throws Exception {
         Lion lion = new Lion(feline);
         Mockito.when(feline.getFood("Хищник")).thenReturn(List.of("Животные", "Птицы", "Рыба"));
-        List<String> actual = Arrays.asList("Животные", "Птицы", "Рыба");
-        Assert.assertEquals(lion.getFood(), actual);
+        List<String> expected = Arrays.asList("Животные", "Птицы", "Рыба");
+        Assert.assertEquals(expected, lion.getFood());
     }
 }

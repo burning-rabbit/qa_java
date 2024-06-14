@@ -24,7 +24,7 @@ public class TestAnimalParam {
     @Test
     public void testGetFood() throws Exception {
         Animal animal = new Animal();
-        Assert.assertEquals(animal.getFood(type), food);
+        Assert.assertEquals(food, animal.getFood(type));
     }
 
 }

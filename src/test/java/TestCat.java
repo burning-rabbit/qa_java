@@ -17,14 +17,14 @@ public class TestCat {
     @Test
     public void testGetSound(){
         Cat cat = new Cat(feline);
-        Assert.assertEquals(cat.getSound(), "Мяу");
+        Assert.assertEquals("Мяу", cat.getSound());
     }
 
     @Test
     public void testGetFood() throws Exception {
         Cat cat = new Cat(feline);
-        List<String> actual = Arrays.asList("Животные", "Птицы", "Рыба");
-        Mockito.when(feline.eatMeat()).thenReturn(actual);
-        Assert.assertEquals(cat.getFood(), actual);
+        List<String> expected = Arrays.asList("Животные", "Птицы", "Рыба");
+        Mockito.when(feline.eatMeat()).thenReturn(expected);
+        Assert.assertEquals(expected, cat.getFood());
     }
 }

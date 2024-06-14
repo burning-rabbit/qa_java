@@ -7,6 +7,5 @@ public class TestLionException {
     public void testException() throws Exception {
         Feline feline = new Feline();
         Lion lion = new Lion("Гриб", feline);
-        lion.doesHaveMane();
     }
 }

@@ -28,7 +28,7 @@ public class TestLionParam {
     public void testDoesHaveMane() throws Exception {
         Feline feline = new Feline();
         Lion lion = new Lion (sex,feline);
-        Assert.assertEquals(lion.doesHaveMane(), hasMane);
+        Assert.assertEquals(hasMane, lion.doesHaveMane());
     }
 
 }
